@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <script>
+    if (window.self !== window.top) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      window.addEventListener('message', function(e) {
+        if (e.data && e.data.type === 'poli-theme') {
+          document.documentElement.setAttribute('data-theme', e.data.light ? 'light' : 'dark');
+        }
+      });
+    }
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plan safe ear stretching from current to target gauge with APP-approved healing intervals for every size increment.">
+  <title>Ear Stretching Timeline Planner | Poli International</title>
+  <link rel="stylesheet" href="/tools/ear-stretching-timeline/css/style.css">
+</head>
+<body>
+
+<div class="tool-wrapper">
+
+  <header class="tool-header">
+    <div class="tool-header__badge">👂 APP Stretching Protocol</div>
+    <h1>Ear Stretching Timeline Planner</h1>
+    <p>
+      Select your current gauge and target gauge to get a step-by-step stretching plan
+      with APP-approved healing intervals for every size increment.
+    </p>
+  </header>
+
+  <div class="input-card">
+    <div class="form-grid">
+      <div class="form-field">
+        <label for="from-gauge">Current gauge / size</label>
+        <select id="from-gauge" class="input-field"></select>
+      </div>
+      <div class="form-field">
+        <label for="to-gauge">Target gauge / size</label>
+        <select id="to-gauge" class="input-field"></select>
+      </div>
+    </div>
+    <button id="plan-btn" class="btn btn-primary">📅 Plan My Timeline</button>
+  </div>
+
+  <div id="results"></div>
+
+  <div class="disclaimer">
+    <strong>Important:</strong> This planner provides general APP-guideline intervals based on typical healing tissue.
+    Individual healing varies significantly. Always consult a professional piercer before stretching,
+    especially if you have a history of blowouts, keloids, or difficult healing.
+    Never stretch irritated, infected, or recently pierced tissue.
+  </div>
+
+</div>
+
+<script src="/tools/ear-stretching-timeline/js/stretch-data.js"></script>
+<script src="/tools/ear-stretching-timeline/js/app.js"></script>
+</body>
+</html>
