@@ -2058,9 +2058,9 @@ const GAUGE_TABLE = [
 // Recommended minimum and typical healing intervals before advancing to next size
 // Based on established professional piercing practice
 function getWaitWeeks(currentMm) {
-  if (currentMm < 3.2)  return [6, 8];   // Up to 8g: 6-8 weeks
-  if (currentMm < 6.0)  return [8, 10];  // 6g to 2g: 8-10 weeks
-  if (currentMm < 10.0) return [10, 12]; // 2g to 00g: 10-12 weeks
+  if (currentMm < 3.2)  return [4, 8];   // Up to 8g: 4-8 weeks
+  if (currentMm < 6.0)  return [8, 12];  // 6g to 2g: 8-12 weeks
+  if (currentMm < 10.0) return [10, 16]; // 2g to 00g: 10-16 weeks
   if (currentMm < 22.0) return [12, 16]; // 10mm to 20mm: 12-16 weeks
   return [16, 24];                       // 22mm and above: 16-24 weeks
 }
