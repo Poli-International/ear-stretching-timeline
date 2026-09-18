@@ -14,49 +14,55 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Plan safe ear stretching from current to target gauge with APP-approved healing intervals for every size increment.">
+  <meta name="description" content="Plan gradual earlobe stretching one size at a time at the pace tissue tolerates. Two ears, intermediate steps, readiness checks, and dated logs.">
   <title>Ear Stretching Timeline Planner | Poli International</title>
   <link rel="stylesheet" href="/tools/ear-stretching-timeline/css/style.css">
+<script type='application/ld+json'>
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Ear Stretching Timeline Planner",
+  "url": "https://poliinternational.com/tools/ear-stretching-timeline/",
+  "description": "Ear stretching timeline & aftercare chart from 18g to 2 inches. APP-approved healing intervals for safe gauging. BioFlex founder, 25 years.",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript. Requires HTML5.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "Poli International",
+    "url": "https://poliinternational.com"
+  },
+  "creator": {
+    "@type": "Organization",
+    "name": "Poli International",
+    "url": "https://poliinternational.com"
+  },
+  "maintainer": {
+    "@type": "Organization",
+    "name": "Poli International",
+    "url": "https://poliinternational.com"
+  },
+  "dateModified": "2026-09-18",
+  "license": "https://opensource.org/licenses/MIT",
+  "isAccessibleForFree": true
+}
+</script>
+  <link rel="stylesheet" href="/tools/shared/print.css" media="print">
+  <link rel="stylesheet" href="/tools/shared/a11y.css">
 </head>
 <body>
 
-<div class="tool-wrapper">
-
-  <header class="tool-header">
-    <div class="tool-header__badge">👂 APP Stretching Protocol</div>
-    <h1>Ear Stretching Timeline Planner</h1>
-    <p>
-      Select your current gauge and target gauge to get a step-by-step stretching plan
-      with APP-approved healing intervals for every size increment.
-    </p>
-  </header>
-
-  <div class="input-card">
-    <div class="form-grid">
-      <div class="form-field">
-        <label for="from-gauge">Current gauge / size</label>
-        <select id="from-gauge" class="input-field"></select>
-      </div>
-      <div class="form-field">
-        <label for="to-gauge">Target gauge / size</label>
-        <select id="to-gauge" class="input-field"></select>
-      </div>
-    </div>
-    <button id="plan-btn" class="btn btn-primary">📅 Plan My Timeline</button>
-  </div>
-
-  <div id="results"></div>
-
-  <div class="disclaimer">
-    <strong>Important:</strong> This planner provides general APP-guideline intervals based on typical healing tissue.
-    Individual healing varies significantly. Always consult a professional piercer before stretching,
-    especially if you have a history of blowouts, keloids, or difficult healing.
-    Never stretch irritated, infected, or recently pierced tissue.
-  </div>
-
+<div id="app-root" class="tool-wrapper">
+  <!-- Rendered dynamically by app.js with full i18n support -->
 </div>
 
 <script src="/tools/ear-stretching-timeline/js/stretch-data.js"></script>
+<script src="/tools/ear-stretching-timeline/js/warning-svgs.js"></script>
 <script src="/tools/ear-stretching-timeline/js/app.js"></script>
 </body>
 </html>
