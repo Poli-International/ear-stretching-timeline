@@ -458,6 +458,7 @@ function renderApp() {
           <option value="es"${currentLang === 'es' ? ' selected' : ''}>${t('lang.es')}</option>
           <option value="nl"${currentLang === 'nl' ? ' selected' : ''}>${t('lang.nl')}</option>
           <option value="pt"${currentLang === 'pt' ? ' selected' : ''}>${t('lang.pt')}</option>
+          <option value="th"${currentLang === 'th' ? ' selected' : ''}>${t('lang.th')}</option>
         </select>
       </div>
     </div>
