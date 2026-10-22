@@ -426,7 +426,7 @@ function renderApp() {
     if (latestWithRim.rimMarginMm < 3.5) {
       thinningAlertHtml += `
         <div class="thinning-alert-box" role="alert">
-          <strong><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-warn></use></svg> ${t('log.thinningAlertTitle')}:</strong> ${t('log.thinningAlertDesc', { mm: latestWithRim.rimMarginMm })}
+          <strong>⚠ ${t('log.thinningAlertTitle')}:</strong> ${t('log.thinningAlertDesc', { mm: latestWithRim.rimMarginMm })}
         </div>
       `;
     }
@@ -434,7 +434,7 @@ function renderApp() {
       const dropVal = (prevWithRim.rimMarginMm - latestWithRim.rimMarginMm).toFixed(1);
       thinningAlertHtml += `
         <div class="thinning-alert-box" role="alert">
-          <strong><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-warn></use></svg> ${t('log.rapidThinningAlert', { drop: dropVal })}</strong>
+          <strong>⚠ ${t('log.rapidThinningAlert', { drop: dropVal })}</strong>
         </div>
       `;
     }
@@ -445,7 +445,7 @@ function renderApp() {
     <!-- Top Utility Bar with Theme Toggle and Language Selector -->
     <div class="top-bar">
       <button type="button" id="theme-toggle-btn" class="theme-toggle-btn" aria-label="${document.documentElement.getAttribute('data-theme') === 'light' ? t('theme.toggleDark') : t('theme.toggleLight')}">
-        <span class="theme-toggle-icon" aria-hidden="true">${document.documentElement.getAttribute('data-theme') === 'light' ? '<svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-moon></use></svg>' : '<svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-sun></use></svg>'}</span>
+        <span class="theme-toggle-icon" aria-hidden="true">${document.documentElement.getAttribute('data-theme') === 'light' ? '🌙' : '☀️'}</span>
         <span>${document.documentElement.getAttribute('data-theme') === 'light' ? t('theme.toggleDark') : t('theme.toggleLight')}</span>
       </button>
       <div class="lang-selector-wrapper">
@@ -494,7 +494,7 @@ function renderApp() {
     <!-- Next Earliest Date Highlight Banner -->
     <div class="next-date-banner" id="next-date-banner">
       <div class="next-date-header">
-        <span class="next-date-title"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-calendar></use></svg> ${t('nextDate.title')} (${earLabel})</span>
+        <span class="next-date-title">📅 ${t('nextDate.title')} (${earLabel})</span>
       </div>
       ${
         nextDateInfo
@@ -506,7 +506,7 @@ function renderApp() {
             </div>
             <div class="next-date-actions">
               <button class="btn btn-secondary btn-sm" id="export-ics-btn">
-                <svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-calendar></use></svg> ${t('nextDate.exportIcs')}
+                📅 ${t('nextDate.exportIcs')}
               </button>
             </div>
           `
@@ -600,19 +600,19 @@ function renderApp() {
 
       <div class="readiness-actions">
         <button class="btn btn-safe btn-sm" id="btn-ready">
-          <svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-check></use></svg> ${t('readiness.btnReady')}
+          ✓ ${t('readiness.btnReady')}
         </button>
         <button class="btn btn-warn btn-sm" id="btn-not-yet">
-          <svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-clock></use></svg> ${t('readiness.btnNotYet')}
+          ⏳ ${t('readiness.btnNotYet')}
         </button>
       </div>
 
       ${
         ear.readinessConfirmed === 'ready'
-          ? `<div class="readiness-status-msg status-ready"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-check></use></svg> ${t('readiness.statusReady')}</div>`
+          ? `<div class="readiness-status-msg status-ready">✓ ${t('readiness.statusReady')}</div>`
           : ear.readinessConfirmed === 'not-yet'
-          ? `<div class="readiness-status-msg status-notyet"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-clock></use></svg> ${t('readiness.statusNotYet')}</div>`
-          : `<div class="readiness-status-msg status-pending"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-info></use></svg> ${t('readiness.statusPending')}</div>`
+          ? `<div class="readiness-status-msg status-notyet">⏳ ${t('readiness.statusNotYet')}</div>`
+          : `<div class="readiness-status-msg status-pending">ℹ ${t('readiness.statusPending')}</div>`
       }
     </div>
 
@@ -680,7 +680,7 @@ function renderApp() {
       <p>${t('largeSize.body')}</p>
       ${
         isLargeTarget
-          ? `<div class="mt-sm"><strong class="text-danger"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-warn></use></svg> ${t('largeSize.alertActive')}</strong></div>`
+          ? `<div class="mt-sm"><strong class="text-danger">⚠ ${t('largeSize.alertActive')}</strong></div>`
           : ''
       }
     </div>
@@ -725,7 +725,7 @@ function renderApp() {
       </div>
 
       <div class="warning-action-banner">
-        <svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-siren></use></svg> ${t('warning.actionBox')}
+        🚨 ${t('warning.actionBox')}
       </div>
     </div>
 
@@ -776,7 +776,7 @@ function renderApp() {
             </ol>
 
             <button type="button" class="btn btn-warn btn-sm" id="apply-rehab-btn">
-              <svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-shield></use></svg> ${t('rehab.applyBtn')}
+              🛡️ ${t('rehab.applyBtn')}
             </button>
           </div>
         `;
@@ -795,7 +795,7 @@ function renderApp() {
         if (!isEligible) {
           return `
             <div class="warning-action-banner">
-              <svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-info></use></svg> ${t('naked.eligibilityNotice')}
+              ℹ ${t('naked.eligibilityNotice')}
             </div>
           `;
         }
@@ -815,7 +815,7 @@ function renderApp() {
               <div class="naked-phase-item ${p.num === activePhase ? 'current-phase' : ''}">
                 <div class="naked-phase-header">
                   <span>${escHtml(p.title)}</span>
-                  ${p.num === activePhase ? `<span class="badge badge-safe"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-check></use></svg> ${t('naked.currentPhaseLabel')}</span>` : ''}
+                  ${p.num === activePhase ? `<span class="badge badge-safe">✓ ${t('naked.currentPhaseLabel')}</span>` : ''}
                 </div>
                 <p class="naked-phase-desc">${escHtml(p.desc)}</p>
               </div>
@@ -827,7 +827,7 @@ function renderApp() {
               ${t('naked.sessionsCompleted', { count: ear.nakedSessions || 0 })}
             </div>
             <button type="button" class="btn btn-secondary btn-sm" id="log-naked-btn">
-              <svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-moon></use></svg> ${t('naked.logTodayBtn')}
+              🛏️ ${t('naked.logTodayBtn')}
             </button>
           </div>
         `;
@@ -1019,10 +1019,10 @@ function renderApp() {
     <!-- Action Footer (Print & Reset) -->
     <div class="action-footer print-hide">
       <button class="btn btn-outline" id="print-plan-btn">
-        <svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-print></use></svg> ${t('actions.print')}
+        🖨️ ${t('actions.print')}
       </button>
       <button class="btn btn-secondary btn-sm" id="clear-all-btn">
-        <svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-trash></use></svg> ${t('actions.clearAll')}
+        🗑️ ${t('actions.clearAll')}
       </button>
     </div>
 
